@@ -1,0 +1,465 @@
+[P1] 鐏緳鏋?AI 瑙嗚鐩戞帶绯荤粺
+
+[P2] Dragon Fruit AI Vision Monitoring System
+
+[P4] 椤圭洰鎶€鏈枃妗?
+
+[P5] 鍩轰簬娣卞害瀛︿範涓庤绠楁満瑙嗚鐨勭伀榫欐灉鏅鸿兘鐩戞帶鏂规
+
+[P7] 鎶€鏈爤锛歅ython 3.12 路 PyTorch 2.12 路 YOLOv5 路 OpenCV 路 Gradio 路 PIL
+
+[P8] 椤圭洰璺緞锛?project-root>/dragon_fruit/
+
+[P9] 鏃ユ湡锛?026 骞?5 鏈?
+
+[P10] 鏍囩璇█锛氳嫳鏂?
+
+[P12] 鐩? 褰?
+
+[P14] 绗竴绔? 椤圭洰姒傝堪
+
+[P15] 1.1 椤圭洰鑳屾櫙
+
+[P16] 鐏緳鏋滐紙瀛﹀悕锛欻ylocereus undatus锛夋槸鎴戝浗鍗楁柟閲嶈鐨勭儹甯︾粡娴庝綔鐗┿€備紶缁熸灉鍥贰妫€渚濋潬浜哄伐鐩妫€鏌ワ紝瀛樺湪鏁堢巼浣庛€佷富瑙傛€у己銆侀毦浠ヨ鐩栧ぇ闈㈢Н鏋滃洯绛夐棶棰樸€傝绠楁満瑙嗚鍜屾繁搴﹀涔犳妧鏈殑鍙戝睍涓哄啘涓氭櫤鑳藉寲绠＄悊鎻愪緵浜嗘柊鐨勬妧鏈墜娈点€?
+
+[P17] 鏈郴缁熷埄鐢?AI 瑙嗚鎶€鏈紝瀹炵幇瀵圭伀榫欐灉鏋滃洯鐨勬櫤鑳藉寲鐩戞帶锛岃兘澶熻嚜鍔ㄥ垽鏂灉瀹炴垚鐔熷害銆佽瘑鍒梾铏鐥囩姸銆佺洃娴嬫鏍敓闀垮紓甯哥姸鎬侊紝骞跺皢璇嗗埆缁撴灉杈撳嚭涓哄垎绾ч璀︿俊鎭拰缁撴瀯鍖栨棩蹇楄褰曘€?
+
+[P18] 1.2 鍔熻兘娓呭崟
+
+[P19] 锛?锛夋灉瀹炴垚鐔熷害妫€娴?鈥?YOLOv5s 鐩爣妫€娴嬶紝2 绫诲埆锛圲nripe / Ripe锛夛紝mAP@0.5 = 0.995
+
+[P20] 锛?锛夌梾铏璇嗗埆 鈥?CNN 鍥惧儚鍒嗙被锛? 绫诲埆锛圚ealthy / Aphids / Anthracnose锛夛紝鍚檷绾х瓥鐣?
+
+[P21] 锛?锛夌敓闀垮紓甯告娴?鈥?绾?OpenCV 缁忓吀 CV锛岀豢鍖栨寚鏁?/ 榛勫寲鐜?/ 鍊炬枩瑙掑害
+
+[P22] 锛?锛夊浘鍍忛澶勭悊 鈥?CLAHE 浣庡厜澧炲己 + 楂樻柉闄嶅櫔 + letterbox 灏哄璋冩暣 + 褰掍竴鍖?
+
+[P23] 锛?锛夐璀︿笌鏃ュ織 鈥?涓夌骇棰勮锛圛NFO / WARNING / CRITICAL锛? CSV/JSON 鍙屾牸寮忔棩蹇?
+
+[P24] 锛?锛塛eb 浜や簰鐣岄潰 鈥?Gradio 鎷栨嫿涓婁紶锛屽疄鏃跺垎鏋愶紝缁撴灉鍙鍖?
+
+[P25] 1.3 鎶€鏈爤
+
+[P26] 1.4 璁捐鍘熷垯
+
+[P27] 锛?锛夐浂渚靛叆锛歞ragon_fruit/ 鐙珛鍖咃紝涓嶄慨鏀逛换浣?YOLOv5 鍘熷鏂囦欢锛屼粎閫氳繃 import 澶嶇敤鐜版湁鍔熻兘銆?
+
+[P28] 锛?锛夌被灏佽锛氭瘡涓ā鍧楁槸涓€涓嫭绔嬬被锛屾瀯閫犲嚱鏁版敞鍏?MonitoringConfig锛屽崟涓€鍏ュ彛鏂规硶銆?
+
+[P29] 锛?锛変腑蹇冨寲閰嶇疆锛氭墍鏈夎矾寰勩€侀槇鍊笺€佸紑鍏抽泦涓湪 config.py 鐨?MonitoringConfig 鏁版嵁绫汇€?
+
+[P30] 锛?锛夌粺涓€杈撳嚭濂戠害锛歁onitoringResult 鏁版嵁绫诲畾涔?JSON 鍙簭鍒楀寲杈撳嚭鏍煎紡銆?
+
+[P31] 锛?锛変紭闆呴檷绾э細鐥呰櫕瀹虫ā鍨嬫湭璁粌鏃惰嚜鍔ㄨ烦杩囷紝涓嶅奖鍝嶆垚鐔熷害妫€娴嬪拰鐢熼暱寮傚父鍒嗘瀽銆?
+
+[P33] 绗簩绔? 绯荤粺鏋舵瀯涓庢暟鎹祦
+
+[P34] 2.1 鏁翠綋鏋舵瀯
+
+[P35] 绯荤粺閲囩敤妯″潡鍖栨祦姘寸嚎鏋舵瀯锛圥ipeline Architecture锛夈€傝緭鍏ュ浘鍍忎緷娆℃祦缁忓洓涓牳蹇冨鐞嗛樁娈碉紝鏈€缁堢敱棰勮寮曟搸姹囨€昏瘎浼板苟杈撳嚭鎶ュ憡銆?
+
+[P36] 绯荤粺鏋舵瀯鍥撅紙鏁版嵁娴侊級锛?
+
+[P37] 杈撳叆鍥惧儚 (BGR uint8)
+
+[P38] |
+
+[P39] v
+
+[P40] [1] PreprocessingPipeline    CLAHE -> Denoise -> Letterbox -> ToTensor
+
+[P41] |                         RGB float32 (1,3,640,H)
+
+[P42] +----------+----------+----------+
+
+[P43] |          |          |          |
+
+[P44] v          v          v          v
+
+[P45] [2] Maturity  [3] Pest    [4] Growth   (骞惰姒傚康锛屽疄闄呬覆琛?
+
+[P46] Detector     Classifier  Detector
+
+[P47] YOLOv5鎺ㄧ悊   CNN鍒嗙被      HSV + Edge
+
+[P48] |          |          |
+
+[P49] v          v          v
+
+[P50] MonitoringResult (缁熶竴鏁版嵁绫?
+
+[P51] |
+
+[P52] v
+
+[P53] [5] AlertEngine  6鏉¤鍒欒瘎浼?-> List<Alert>
+
+[P54] |
+
+[P55] v
+
+[P56] 杈撳嚭: JSON鎶ュ憡 + 鏍囨敞鍥?+ CSV棰勮鏃ュ織
+
+[P57] 2.2 妯″潡渚濊禆鍏崇郴
+
+[P58] 鍚勬ā鍧椾箣闂寸殑 import 渚濊禆鍏崇郴锛堢澶存柟鍚?= 琚緷璧栨柟锛夛細
+
+[P59] cli.py
+
+[P60] -> config.py (MonitoringConfig)
+
+[P61] -> pipeline/orchestrator.py (DragonFruitMonitor)
+
+[P62] -> web/app.py (run_server, lazy --serve only)
+
+[P64] pipeline/orchestrator.py
+
+[P65] -> preprocessing/pipeline.py
+
+[P66] -> detection/maturity.py
+
+[P67] -> classification/pest_disease.py
+
+[P68] -> growth/anomaly.py
+
+[P69] -> pipeline/alert.py
+
+[P70] -> pipeline/report.py
+
+[P72] detection/maturity.py
+
+[P73] -> detection/result_formatter.py
+
+[P74] -> pipeline/draw_utils.py (put_chinese_text_with_bg)
+
+[P75] -> YOLOv5: models.common.DetectMultiBackend
+
+[P76] -> YOLOv5: utils.general (non_max_suppression, scale_boxes)
+
+[P77] -> YOLOv5: utils.torch_utils.select_device
+
+[P79] classification/pest_disease.py
+
+[P80] -> YOLOv5: models.common.DetectMultiBackend
+
+[P81] -> YOLOv5: utils.augmentations.classify_transforms
+
+[P83] growth/anomaly.py
+
+[P84] -> growth/color_analysis.py
+
+[P85] -> growth/geometry.py
+
+[P87] preprocessing/transforms.py
+
+[P88] -> YOLOv5: utils.augmentations.letterbox
+
+[P89] 2.3 YOLOv5 澶嶇敤缁勪欢娓呭崟
+
+[P90] dragon_fruit/ 閫氳繃 import 澶嶇敤浠ヤ笅 YOLOv5 鍘熺敓鍔熻兘锛屼笉閲嶅閫犺疆瀛愶細
+
+[P92] 绗笁绔? 璇︾粏妯″潡璁捐
+
+[P93] 3.1 棰勫鐞嗘ā鍧楋紙preprocessing/锛?
+
+[P94] PreprocessingPipeline 绫?鈥?鍙厤缃殑 5 姝ラ澶勭悊娴佹按绾裤€傝緭鍏?BGR uint8 (H,W,3)锛岃緭鍑?RGB float32 tensor (1,3,640,H)锛岃寖鍥?[0,1]銆?
+
+[P95] 3.1.1 enhancers.py
+
+[P96] apply_clahe(image, clip_limit=2.0, tile_grid_size=(8,8)) 鈫?np.ndarray锛氬皢 BGR 鍥捐浆鎹㈠埌 LAB 绌洪棿锛屽 L 閫氶亾鍋?CLAHE 鑷€傚簲鐩存柟鍥惧潎琛″寲锛屽寮轰綆鍏夊姣斿害銆?
+
+[P97] adjust_brightness_contrast(image, alpha=1.2, beta=10) 鈫?np.ndarray锛歝v2.convertScaleAbs 璋冩暣瀵规瘮搴︼紙alpha锛夊拰浜害锛坆eta锛夈€?
+
+[P98] 3.1.2 denoisers.py
+
+[P99] denoise_gaussian(image, kernel_size=(5,5)) 鈫?np.ndarray锛氶珮鏂ā绯婇檷鍣紝閫熷害蹇€?
+
+[P100] denoise_nlm(image, h=10, h_color=10, template_size=7, search_size=21) 鈫?np.ndarray锛氶潪灞€閮ㄥ潎鍊奸檷鍣紝鏁堟灉濂戒絾鎱€?
+
+[P101] denoise_fast(image) 鈫?np.ndarray锛氫究鎹峰嚱鏁帮紝鍐呴儴璋冪敤 denoise_gaussian(kernel_size=(3,3))銆?
+
+[P102] 3.1.3 transforms.py
+
+[P103] resize_letterbox(image, target_size=(640,640), stride=32, auto=True) 鈫?np.ndarray锛氳皟鐢?YOLOv5 鍘熺敓 letterbox()锛屼繚鎸佸楂樻瘮濉厖鑷崇洰鏍囧昂瀵革紝纭繚灏哄鏄?stride 鐨勬暣鏁板€嶃€?
+
+[P104] to_tensor(image) 鈫?torch.Tensor锛欻WC鈫扖HW 杞疆锛孊GR鈫扲GB锛屆?55 褰掍竴鍖栵紝娣诲姞 batch 缁村害銆傝繑鍥?(1,3,H,W) float32銆?
+
+[P105] 3.1.4 pipeline.py
+
+[P106] PreprocessingPipeline.__call__(image) 鈫?torch.Tensor锛氭寜 config 寮€鍏充緷娆℃墽琛岋細adjust_brightness_contrast 鈫?apply_clahe 鈫?denoise_fast 鈫?resize_letterbox 鈫?to_tensor銆傛瘡涓楠ゅ彲鐢?MonitoringConfig 涓殑 boolean 寮€鍏崇嫭绔嬫帶鍒躲€?
+
+[P107] 3.2 鎴愮啛搴︽娴嬫ā鍧楋紙detection/锛?
+
+[P108] MaturityDetector 绫?鈥?灏佽 YOLOv5 DetectMultiBackend 鐨勭洰鏍囨娴嬫帹鐞嗐€?
+
+[P109] __init__(config)锛氳皟鐢?select_device() 閫夋嫨璁＄畻璁惧锛孌etectMultiBackend() 鍔犺浇妯″瀷鏉冮噸锛宮odel.warmup() 棰勭儹銆?
+
+[P110] detect(preprocessed_tensor) 鈫?List[dict]锛氬皢棰勫鐞?tensor 閫佸叆妯″瀷 鈫?NMS 鍚庡鐞?鈫?scale_boxes 缂╂斁鍥炲師鍥惧潗鏍?鈫?format_detections() 鏍煎紡鍖栥€傝繑鍥炴瘡涓娴嬫鐨?class_name / label_en / maturity / confidence / bbox銆?
+
+[P111] annotate(image, results) 鈫?np.ndarray锛氫娇鐢?PIL draw_utils 鍦ㄥ浘涓婄敾缁胯壊锛堟垚鐔燂級/ 姗欒壊锛堟湭鐔燂級杈圭晫妗嗗拰鑻辨枃鏍囩銆?
+
+[P112] detect_on_image(image, preprocessed_tensor) 鈫?(results, annotated)锛氫竴绔欏紡鏂规硶锛岃繑鍥炴娴嬬粨鏋滃拰鏍囨敞鍥俱€?
+
+[P113] 绫诲埆鏄犲皠锛堟潵鑷?K.yaml锛夛細shenghlg 鈫?Unripe锛宧uolongguo 鈫?Ripe銆?
+
+[P114] 3.3 鐥呰櫕瀹冲垎绫绘ā鍧楋紙classification/锛?
+
+[P115] PestDiseaseClassifier 绫?鈥?CNN 鍥惧儚鍒嗙被鍣紝璇嗗埆 3 绫荤梾铏銆?
+
+[P116] __init__(config)锛氳嫢 config.pest_weights 瀛樺湪鍒欏姞杞芥ā鍨嬶紝鍚﹀垯鏃ュ織鎻愮ず璺宠繃銆俛vailable 灞炴€ф爣璇嗘ā鍨嬫槸鍚﹀彲鐢ㄣ€?
+
+[P117] classify(image, top_k=3) 鈫?List[dict]锛氬皢鍥惧儚 resize 鍒?224x224 鈫?閫佸叆妯″瀷 鈫?softmax 鈫?杩斿洖 Top-K 棰勬祴锛坈lass_id / label_en / confidence锛夈€傛ā鍨嬫湭鍔犺浇鏃惰繑鍥為檷绾ф爣璁般€?
+
+[P118] classify_crops(image, detection_boxes) 鈫?List[List[dict]]锛氬鎴愮啛搴︽娴嬪嚭鐨勬瘡涓灉瀹炲尯鍩熻鍓悗閫愪竴鍒嗙被銆?
+
+[P119] 棰勫畾涔夌被鍒細0 = Healthy锛? = Aphids锛? = Anthracnose銆?
+
+[P120] 3.4 鐢熼暱寮傚父妫€娴嬫ā鍧楋紙growth/锛?
+
+[P121] GrowthAnomalyDetector 绫?鈥?绾?OpenCV 缁忓吀 CV锛屾棤闇€娣卞害瀛︿範妯″瀷銆俛nalyze(image) 杩斿洖鐢熼暱寮傚父鍒嗘瀽缁撴灉銆?
+
+[P122] 3.4.1 color_analysis.py 鈥?HSV 棰滆壊鍒嗘瀽
+
+[P123] compute_greenness_index(image) 鈫?float锛欻SV 鑹茬浉 35-85 鑼冨洿锛堢豢鑹诧級鍍忕礌鍗犳瘮銆備綆浜?0.30 瑙﹀彂缁垮寲涓嶈冻鍛婅銆?
+
+[P124] compute_yellowness_ratio(image) 鈫?float锛欻SV 鑹茬浉 20-35 鑼冨洿锛堥粍鑹诧級鍦ㄩ潪鏋滃疄鍖哄煙锛堟帓闄よ壊鐩?0-10 鍜?160-180 鐨勭孩鑹?绱壊锛変腑鐨勫崰姣斻€傞珮浜?0.15 瑙﹀彂榛勫寲鍛婅銆?
+
+[P125] segment_foliage(image) 鈫?np.ndarray锛氱豢鑹叉帺鐮?+ 褰㈡€佸闂?寮€杩愮畻鍘诲櫔锛岃緭鍑轰簩鍊煎墠鏅帺鐮併€?
+
+[P126] 3.4.2 geometry.py 鈥?鍑犱綍鍒嗘瀽
+
+[P127] detect_tilt_angle(image) 鈫?float锛氱伆搴?鈫?楂樻柉妯＄硦 鈫?Canny 杈圭紭妫€娴嬶紙闃堝€?50/150锛夆啋 姒傜巼 Hough 绾挎娴嬶紙threshold=100, minLineLength=80, maxLineGap=20锛夆啋 璁＄畻鎵€鏈夌嚎娈佃搴?鈫?鍙栦腑浣嶆暟銆傞珮浜?15掳 瑙﹀彂鍊炬枩鍛婅銆?
+
+[P128] estimate_plant_coverage(image, green_mask) 鈫?float锛氭鏍豢鑹插尯鍩熷崰鐢婚潰姣斾緥銆?
+
+[P129] 3.4.3 HSV 闃堝€煎弬鑰冭〃
+
+[P130] 3.5 娴佹按绾胯皟搴︽ā鍧楋紙pipeline/锛?
+
+[P131] 3.5.1 orchestrator.py 鈥?椤跺眰璋冨害鍣?
+
+[P132] DragonFruitMonitor 绫?鈥?绯荤粺鎬昏皟搴﹀櫒锛岃仛鍚堟墍鏈夊瓙妯″潡銆?
+
+[P133] __init__(config)锛氭瀯閫?PreprocessingPipeline / MaturityDetector / PestDiseaseClassifier / GrowthAnomalyDetector / AlertEngine / LogWriter銆傚悇瀛愭ā鍧楁牴鎹?config 寮€鍏冲喅瀹氭槸鍚﹀惎鐢ㄣ€?
+
+[P134] process_image(image_path) 鈫?MonitoringResult锛氬畬鏁村鐞嗘祦姘寸嚎 鈥?璇诲彇鍥惧儚 鈫?棰勫鐞?鈫?鎴愮啛搴︽娴?鈫?鐥呰櫕瀹冲垎绫?鈫?鐢熼暱寮傚父鍒嗘瀽 鈫?棰勮璇勪及 鈫?CSV 鏃ュ織璁板綍 鈫?鐢熸垚鎽樿銆?
+
+[P135] process_and_save(image_path, output_dir) 鈫?MonitoringResult锛氬湪 process_image 鍩虹涓婇澶栦繚瀛樻爣娉ㄥ浘鍜?JSON 鏃ュ織銆?
+
+[P136] process_directory(dir_path, output_dir) 鈫?List[MonitoringResult]锛氭壒閲忓鐞?+ 鐢熸垚 batch_report.json銆?
+
+[P137] 3.5.2 MonitoringResult 鏁版嵁绫?
+
+[P138] 缁熶竴鐨?JSON 鍙簭鍒楀寲杈撳嚭濂戠害锛屽瓧娈碉細image_path / timestamp / maturity_detections / pest_disease_results / growth_anomalies / alerts / annotated_image_path / summary銆?
+
+[P139] 3.5.3 alert.py 鈥?棰勮涓庢棩蹇?
+
+[P140] AlertLevel 鏋氫妇锛欼NFO / WARNING / CRITICAL銆?
+
+[P141] AlertEngine锛氬唴缃?6 鏉?AlertRule锛宔valuate(result) 鏂规硶閬嶅巻鎵€鏈夎鍒欏苟杩斿洖瑙﹀彂鐨?Alert 鍒楄〃銆?
+
+[P142] LogWriter锛歸rite_csv(alerts, image_path) 鍐欏叆姣忔棩 CSV 鏃ュ織锛圲TF-8 BOM 缂栫爜锛夛紱write_json_log(result, output_path) 鍐欏叆瀹屾暣 JSON 鏃ュ織銆?
+
+[P143] 3.5.4 report.py 鈥?鎶ュ憡鐢熸垚
+
+[P144] generate_summary_text(result) 鈫?str锛氱敓鎴愪竴琛岃嫳鏂囨憳瑕侊紝鍖呭惈鎴愮啛搴︾粺璁°€佺梾铏缁撴灉銆佺敓闀垮紓甯告暟閲忓拰棰勮缁熻銆?
+
+[P145] save_annotated_image(image, result, output_path) 鈫?Path锛氫娇鐢?PIL锛堥潪 cv2.putText锛夋覆鏌撹嫳鏂囨爣绛撅紝缁樺埗杈圭晫妗嗐€佸乏涓婅淇℃伅闈㈡澘鍜屽垎绾ч璀﹁鐩栥€?
+
+[P146] generate_json_report(results, output_path) 鈫?Path锛氬皢 MonitoringResult 鍒楄〃搴忓垪鍖栦负 JSON 鏂囦欢锛坋nsure_ascii=False, indent=2锛夈€?
+
+[P147] 3.5.5 draw_utils.py 鈥?鏂囧瓧娓叉煋
+
+[P148] 鍏抽敭璁捐鍐崇瓥锛歝v2.putText() 鐨?Hershey 瀛椾綋涓嶆敮鎸佷换浣曢潪 ASCII 瀛楃锛堜腑鏂囥€佹棩鏂囩瓑鍧囨樉绀轰负 ????锛夈€傚洜姝ゆ湰绯荤粺鎵€鏈夊浘鍍忔枃瀛楁覆鏌撶粺涓€浣跨敤 PIL/Pillow銆?
+
+[P149] put_chinese_text(img, text, org, font_size, color)锛氬湪 OpenCV BGR 鍥惧儚涓婄粯鍒舵枃瀛椼€傛祦绋嬶細BGR鈫扲GB鈫扨IL Image鈫扞mageDraw鈫掑啓鍥炲師 numpy 鏁扮粍銆?
+
+[P150] put_chinese_text_with_bg(img, text, org, font_size, text_color, bg_color)锛氬甫鍗婇€忔槑鑳屾櫙鐨勬枃瀛楋紙RGBA alpha 鍚堟垚锛夛紝鐢ㄤ簬鏍囨敞鍥炬爣绛惧拰棰勮淇℃伅銆?
+
+[P151] 瀛椾綋浼樺厛绾э細Microsoft YaHei (msyh.ttc) > SimHei > SimSun > KaiTi銆?
+
+[P152] 3.6 Web 鐣岄潰锛坵eb/锛?
+
+[P153] 鑷畾涔?CSS 椹卞姩锛堟棤 Gradio 涓婚渚濊禆锛夛紝楂樺姣斿害鐧藉崱璁捐锛屾殩姗欏己璋冭壊銆俠uild_interface() 鍒涘缓 UI 甯冨眬锛氫笂浼犲尯/缁撴灉鍥惧苟鎺掑姣斻€佹垚鐔熷害 HTML 琛ㄦ牸锛堝惈褰╄壊鐘舵€佸窘绔狅級銆佺梾铏 HTML 琛ㄦ牸銆佺敓闀垮紓甯告寚鏍?HTML 琛ㄦ牸銆佸啘浜嬪缓璁垪琛ㄣ€侀璀﹁〃鏍硷紙宸︿晶鑹叉潯+褰╄壊鍦嗙偣锛夈€佷笅杞芥寜閽紙JSON + JPG 鏍囨敞鍥撅級銆?
+
+[P154] analyze(image) 鍥炶皟鍑芥暟锛氫复鏃朵繚瀛樹笂浼犲浘 鈫?璋冪敤 DragonFruitMonitor.process_and_save() 鈫?璇诲彇鏍囨敞鍥?鈫?鏍煎紡鍖?HTML 琛ㄦ牸锛堝惈 Badge 寰界珷锛夆啋 鏋勫缓 JSON/JPG 涓嬭浇鏂囦欢璺緞 鈫?杩斿洖 Gradio 灞曠ず鍏冪粍锛堝惈鏂囦欢涓嬭浇锛夈€?
+
+[P155] run_server(port, share)锛氳缃?NO_PROXY 鐜鍙橀噺锛堣В鍐充紒涓氫唬鐞嗗鑷寸殑 502 閿欒锛夆啋 demo.launch() 鍚姩 Gradio 鏈嶅姟鍣ㄣ€俿hare=True 鏃惰嚜鍔ㄧ敓鎴?*.gradio.live 鍏綉閾炬帴锛堟湁鏁堟湡 1 鍛級锛岄渶 frpc 闅ч亾缁勪欢銆?
+
+[P156] 3.7 鏁版嵁澧炲己妯″潡锛坉ata/锛?
+
+[P157] augmentation.py 鈥?augment_image(image) 鐢熸垚 11 绉嶅寮哄彉浣擄細姘村钩缈昏浆銆? 瑙掑害鏃嬭浆銆伮?0 浜害銆伱?.7/脳1.3 瀵规瘮搴︺€侀珮鏂ā绯娿€伮?0掳 HSV 鑹茶皟鍋忕Щ銆俥xpand_dataset() 瀵硅缁冮泦鎵归噺澧炲己骞跺鍒舵爣娉ㄦ枃浠躲€?
+
+[P158] retrain.py 鈥?璋冪敤 YOLOv5 train.py 閲嶆柊璁粌鎴愮啛搴︽ā鍨嬨€傝嚜鍔ㄦ娴嬪寮烘暟鎹泦锛屽瓨鍦ㄥ垯浣跨敤 K_augmented.yaml銆?
+
+[P159] train_pest.py 鈥?璋冪敤 YOLOv5 classify/train.py 璁粌鐥呰櫕瀹冲垎绫诲櫒銆傛棤闇€鏍囨敞锛屾寜鏂囦欢澶圭被鍒嚜鍔ㄨ瘑鍒€?
+
+[P161] 绗洓绔? 閰嶇疆鍙傛暟鎵嬪唽
+
+[P162] 鎵€鏈夊彲璋冨弬鏁伴泦涓湪 config.py 鐨?MonitoringConfig 鏁版嵁绫讳腑銆備互涓嬪垪鍑哄叏閮ㄥ弬鏁板強鍏堕粯璁ゅ€煎拰鐢ㄩ€斻€?
+
+[P163] 4.1 璺緞閰嶇疆
+
+[P164] 4.2 妫€娴嬪弬鏁?
+
+[P165] 4.3 鐢熼暱寮傚父闃堝€?
+
+[P166] 4.4 妯″潡寮€鍏?
+
+[P167] 4.5 绠楁硶鍐呴儴甯搁噺
+
+[P168] 浠ヤ笅甯搁噺瀹氫箟鍦ㄥ悇鑷殑妯″潡鏂囦欢涓紝涓嶅湪 config.py 涓紙濡傞渶淇敼璇风洿鎺ョ紪杈戝搴旀枃浠讹級锛?
+
+[P170] 绗簲绔? 鏁版嵁闆?
+
+[P171] 5.1 鎴愮啛搴︽暟鎹泦锛坹olo_dataset/锛?
+
+[P172] 鏍煎紡锛歒OLO 鏍囨敞锛堝綊涓€鍖?cx cy w h锛夈€傛爣娉ㄥ伐鍏凤細labelImg銆?
+
+[P173] 鏈€浣虫ā鍨嬶細runs/train/exp4/weights/best.pt 鈥?mAP@0.5=0.995, Recall=1.000銆?
+
+[P174] 5.2 鐥呰櫕瀹虫暟鎹泦锛坉ragon_fruit/data/pest_dataset/锛?
+
+[P175] 鏍煎紡锛氭爣鍑嗗垎绫荤洰褰曠粨鏋勶紙鏂囦欢澶瑰悕 = 绫诲埆鍚嶏級锛屾棤闇€鏍囨敞銆傛敮鎸佺洿鎺ヤ娇鐢?YOLOv5 classify/train.py 璁粌銆?
+
+[P176] 褰撳墠鐘舵€侊細鐩綍宸插缓濂斤紝鏁版嵁寰呮敹闆嗐€傝缁冨懡浠わ細python dragon_fruit/data/train_pest.py
+
+[P177] 5.3 鏁版嵁澧炲己锛坉ragon_fruit/data/augmentation.py锛?
+
+[P178] augment_image() 姣忓紶鍘熷浘鐢熸垚鏈€澶?11 绉嶅寮哄彉浣擄紝expand_dataset() 鎵归噺澶勭悊鏁翠釜璁粌闆嗐€傚寮烘搷浣滃寘鎷細
+
+[P179] 鈼?鍑犱綍澧炲己锛氭按骞崇炕杞€佹棆杞?90掳/180掳/270掳
+
+[P180] 鈼?鍏夊害澧炲己锛氫寒搴?卤30銆佸姣斿害 脳0.7 鍜?脳1.3
+
+[P181] 鈼?妯＄硦澧炲己锛氶珮鏂ā绯?5脳5
+
+[P182] 鈼?棰滆壊澧炲己锛欻SV 鑹茶皟 卤10掳
+
+[P184] 绗叚绔? 杩愯涓庝娇鐢?
+
+[P185] 6.1 鐜瑕佹眰
+
+[P186] 6.2 瀹夎
+
+[P187] # 1. 瀹夎 YOLOv5 鍩虹渚濊禆
+
+[P188] pip install -r requirements.txt
+
+[P189] # 2. 瀹夎 Web 鐣岄潰渚濊禆锛堝彲閫夛級
+
+[P190] pip install gradio
+
+[P191] # 3. 娉ㄦ剰 NumPy 鐗堟湰
+
+[P192] pip install "numpy<2"
+
+[P193] 6.3 CLI 鍛戒护琛屾ā寮?
+
+[P194] cd <project-root>
+
+[P196] # 鍒嗘瀽鍗曞紶鍥惧儚锛堜笉鎸囧畾 --output 鏃惰嚜鍔ㄧ敓鎴愭椂闂存埑瀛愮洰褰曪級
+
+[P197] python dragon_fruit_monitor.py --source 鍥剧墖.jpg
+
+[P199] # 鎵归噺澶勭悊鐩綍
+
+[P200] python dragon_fruit_monitor.py --source ./images/ --output results/
+
+[P202] # 鎸囧畾鑷畾涔夋ā鍨?
+
+[P203] python dragon_fruit_monitor.py --source img.jpg --weights my_model.pt
+
+[P205] # 甯︾梾铏妯″瀷
+
+[P206] python dragon_fruit_monitor.py --source img.jpg --pest-weights pest_best.pt
+
+[P208] # 绂佺敤妯″潡
+
+[P209] python dragon_fruit_monitor.py --source img.jpg --no-pest --no-growth
+
+[P210] 6.4 Web 鐣岄潰妯″紡
+
+[P211] # 鏈湴璁块棶
+
+[P212] python dragon_fruit_monitor.py --serve --no-share --port 7860 --no-share
+
+[P213] # 娴忚鍣ㄦ墦寮€ http://127.0.0.1:5000
+
+[P215] # frpc 鎵嬪姩瀹夎姝ラ瑙?7.5 鑺?
+
+[P216] python dragon_fruit_monitor.py --serve --no-share --port 7860
+
+[P217] 6.5 杈撳嚭鏂囦欢璇存槑锛圕LI 妯″紡涓嶆寚瀹?--output 鏃讹紝鑷姩瀛樺叆 runs/dragon_fruit/{鏃堕棿鎴硙/ 瀛愮洰褰曪紱Web 妯″紡瀛樺叆 runs/dragon_fruit/web/锛?
+
+[P219] 绗竷绔? 鍏抽敭鎶€鏈粏鑺?
+
+[P220] 7.1 PyTorch 2.6+ 鍏煎鎬т慨澶?
+
+[P221] 闂锛歅yTorch 2.6 灏?torch.load() 鐨?weights_only 榛樿鍊间粠 False 鏀逛负 True銆俌OLOv5 鐨?checkpoint 鏄畬鏁存ā鍨?pickle锛屽寘鍚嚜瀹氫箟绫伙紙models.yolo.DetectionModel锛夛紝琚?weights_only 涓ユ牸妯″紡鎷掔粷銆?
+
+[P222] 瑙ｅ喅鏂规锛歞ragon_fruit/__init__.py 鍦ㄥ鍏ヤ换浣?YOLOv5 妯″潡涔嬪墠 monkey-patch torch.load锛岃缃?weights_only=False銆?
+
+[P223] import torch
+
+[P224] _original_load = torch.load
+
+[P225] def _patched_load(*a, **kw):
+
+[P226] kw.setdefault("weights_only", False)
+
+[P227] return _original_load(*a, **kw)
+
+[P228] torch.load = _patched_load
+
+[P229] 7.2 NumPy 鐗堟湰绾︽潫
+
+[P230] NumPy 2.x 瀵艰嚧 pandas._libs 鍜?pyarrow.lib 瀵煎叆宕╂簝锛?numpy.core.multiarray failed to import'锛夈€傚繀椤婚檷绾у埌 numpy<2銆傚綋鍓嶅畨瑁呯増鏈?1.26.4銆?
+
+[P231] 7.3 鏂囧瓧娓叉煋鏂规
+
+[P232] cv2.putText() 鐨?Hershey 鍐呯疆瀛椾綋浠呮敮鎸?ASCII/Latin 瀛楃锛屾墍鏈夐潪 ASCII 瀛楃锛堝寘鎷腑鏂?CJK锛夊潎娓叉煋涓?????銆傚洜姝ょ郴缁熸墍鏈夊浘鍍忔爣娉ㄤ娇鐢?PIL/Pillow 鐨?TrueType 瀛椾綋娓叉煋銆?
+
+[P233] 瀛椾綋鏌ユ壘浼樺厛绾э細C:/Windows/Fonts/msyh.ttc锛堝井杞泤榛戯級> simhei.ttf锛堥粦浣擄級> simsun.ttc锛堝畫浣擄級> simkai.ttf锛堟シ浣擄級銆傚綋鍓嶇郴缁熸爣绛句娇鐢ㄨ嫳鏂囷紝PIL 娓叉煋鍚屾牱閫傜敤銆?
+
+[P234] 7.4 Gradio 浠ｇ悊鍏煎鎬?
+
+[P235] 閮ㄥ垎浼佷笟缃戠粶鐜涓嬶紝绯荤粺浠ｇ悊璁剧疆浼氭嫤鎴?localhost 璇锋眰锛屽鑷?Gradio 鍚姩鏃剁殑鍋ュ悍妫€鏌ュけ璐ワ紙502 Bad Gateway锛夈€?
+
+[P236] 瑙ｅ喅鏂规锛歸eb/app.py 鐨?run_server() 鍦ㄥ惎鍔ㄥ墠璁剧疆 NO_PROXY=localhost,127.0.0.1 鐜鍙橀噺銆?
+7.5 Gradio 鍏綉閾炬帴閰嶇疆锛坒rpc锛?
+鍏綉鍒嗕韩閾炬帴闇€瑕?frpc锛團ast Reverse Proxy Client锛夐毀閬撶粍浠躲€傝嫢琚槻鐏鎷︽埅鏃犳硶鑷姩涓嬭浇锛屾寜浠ヤ笅姝ラ鎵嬪姩瀹夎锛?
+锛?锛変笅杞斤細https://cdn-media.huggingface.co/frpc-gradio-0.3/frpc_windows_amd64.exe
+锛?锛夐噸鍛藉悕涓?frpc_windows_amd64_v0.3
+锛?锛夋斁鍏ョ洰褰曪細C:\Users\<鐢ㄦ埛鍚?\.cache\huggingface\gradio\frpc\
+瀹屾垚鍚庨噸鍚?Gradio 鍗冲彲鐢熸垚 *.gradio.live 鍏綉閾炬帴锛堟湁鏁堟湡 1 鍛級銆?
+
+[P238] 绗叓绔? 鎬荤粨涓庡睍鏈?
+
+[P239] 8.1 椤圭洰鎴愭灉
+
+[P240] 锛?锛夋垚鐔熷害妫€娴嬶細YOLOv5s 2 绫荤洰鏍囨娴嬶紝mAP@0.5 = 0.995锛屽噯纭瘑鍒?Unripe / Ripe銆?
+
+[P241] 锛?锛夌梾铏璇嗗埆锛欳NN 3 绫诲垎绫伙紙Healthy / Aphids / Anthracnose锛夛紝鍚紭闆呴檷绾х瓥鐣ャ€?
+
+[P242] 锛?锛夌敓闀垮紓甯告娴嬶細绾?OpenCV HSV + 杈圭紭妫€娴嬶紝3 缁村害锛堢豢鍖?/ 榛勫寲 / 鍊炬枩锛夛紝鏃犺缁冩暟鎹渶姹傘€?
+
+[P243] 锛?锛夐璀︾郴缁燂細6 鏉¤鍒?/ 3 绾ч璀?/ CSV+JSON 鍙屾牸寮忔棩蹇椼€?
+
+[P244] 锛?锛夊伐绋嬪寲锛歞ragon_fruit/ 鐙珛鍖咃紝闆朵镜鍏?YOLOv5锛孋LI + Gradio 鍙屾ā寮忥紝28 涓?Python 鏂囦欢锛屽畬鏁翠腑鏂囨妧鏈枃妗ｃ€?
+
+[P245] 8.2 鍚庣画鏀硅繘鏂瑰悜
+
+[P246] 锛?锛夋暟鎹泦鎵╁厖锛氬綋鍓?~70 寮犳垚鐔熷害璁粌鍥撅紝闇€鎵╁ぇ瑕嗙洊鏇村瑙掑害/鍏夌収/鑳屾櫙銆傚彲杩愯 augmentation.py 绂荤嚎澧炲己銆?
+
+[P247] 锛?锛夌梾铏鏁版嵁鏀堕泦锛歱est_dataset 鐩綍宸插氨缁紝鏀惧叆鍥剧墖鍗冲彲璁粌銆傛瘡绫诲缓璁嚦灏?30-50 寮犮€?
+
+[P248] 锛?锛夊疄鏃舵憚鍍忓ご閲囬泦锛歒OLOv5 宸插唴缃?LoadStreams锛坲tils/dataloaders.py锛夛紝闇€纭欢閫傞厤銆?
+
+[P249] 锛?锛夎竟缂橀儴缃诧細export.py 鏀寔 TFLite / ONNX / TorchScript 瀵煎嚭锛屽彲閮ㄧ讲鍒版爲鑾撴淳 / Jetson銆?
+
+[P250] 锛?锛夌梾铏绫诲埆鎵╁睍锛氬鍔犺寧鑵愮梾銆佷粙澹宠櫕銆佽鏂戠梾绛夋洿澶氱被鍒€?
+
+[P251] 锛?锛夌敓闀垮紓甯镐紭鍖栵細閽堝鐏緳鏋滄鏍舰鎬佷紭鍖栧€炬枩妫€娴嬶紝澧炲姞妞嶆牚楂樺害姣斻€佸啝骞呬及绠楃瓑鎸囨爣銆?
+
+[P252] 锛?锛夊巻鍙叉暟鎹簱锛氬缓绔嬮暱鏈熸娴嬫暟鎹簱锛屾敮鎸佽秼鍔垮垎鏋愬拰鐩戞帶鎶ヨ〃銆?
