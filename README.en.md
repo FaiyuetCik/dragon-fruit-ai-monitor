@@ -4,6 +4,8 @@ A dragon fruit image-analysis project built on YOLOv5, OpenCV and Gradio. It det
 
 [中文说明](README.md) · [Environment guide (Chinese)](ENVIRONMENT.md)
 
+> This repository is the source code and demonstration framework for a local dragon fruit maturity image-analysis system. It supports still-image detection, batch processing, result reports and basic anomaly indicators. The code path is runnable locally, but trained weights and training data are intentionally kept out of the repository; users must provide a compatible `best.pt` and their own images.
+
 ## Current capabilities
 
 - **Maturity detection:** two classes, `shenghlg` (unripe) and `huolongguo` (ripe), using a separately trained YOLOv5 checkpoint.
@@ -17,13 +19,13 @@ The custom application currently processes still images. Continuous camera monit
 
 ## Required local assets
 
-**This repository contains source code, labels, configuration and dependency lists. It does not include trained checkpoints, original images, generated results or a virtual environment. Cloning alone is not enough to run detection.**
+**This repository contains source code, configuration and dependency lists. Training images and labels are private and are not included. It does not include trained checkpoints, original images, generated results or a virtual environment. Cloning alone is not enough to run detection.**
 
 Provide a compatible YOLOv5 checkpoint trained on the two dragon fruit classes above, in that order. The web application loads `runs/train/exp4/weights/best.pt` by default; create that directory and place the checkpoint there, or change `MonitoringConfig.weights` in [config.py](dragon_fruit/config.py). The CLI also accepts `--weights`.
 
 A generic `yolov5s.pt` is not a replacement for the dragon fruit maturity checkpoint. No public download for the custom weights is currently provided.
 
-For training, supply images under `yolo_dataset/images/train/` and `yolo_dataset/images/val/` with names matching the included labels.
+For training, supply your own images and labels under your local dataset directories. Training data is not included in this repository.
 
 ## Setup: Windows, Python 3.12, CPU
 
