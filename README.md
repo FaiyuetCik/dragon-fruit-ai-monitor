@@ -131,6 +131,6 @@ verify_monitor_environment.py 本地端到端验证脚本
 - 病虫害模型未就绪；实时摄像头、历史趋势看板和外部告警推送仍待完成。
 - “无成熟果实”规则目前仅在完全未检测到果实时触发，尚需区分“只有未成熟果实”的情况。
 
-## 来源与许可
+## 来源与许可证
 
-本项目基于 [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5) 构建，保留上游代码及许可证；火龙果监测应用位于 `dragon_fruit/`。许可证文本见 [LICENSE](LICENSE)（GNU AGPL v3）。YOLOv5 原项目的引用信息保存在 [CITATION.cff](CITATION.cff)。
+本项目包含并基于 [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5) 源码，统一采用 GNU AGPL v3。`dragon_fruit/` 是本项目的原创应用层和修改集成代码。详细归属、第三方依赖说明和无担保声明见 [NOTICE](NOTICE)；许可证文本见 [LICENSE](LICENSE)。

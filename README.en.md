@@ -87,4 +87,4 @@ The dataset is small and needs independent evaluation under varied lighting, bac
 
 ## Attribution and license
 
-Built on [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5), retaining upstream code and its license. The dragon fruit application is in `dragon_fruit/`. See [LICENSE](LICENSE) for GNU AGPL v3 and [CITATION.cff](CITATION.cff) for the upstream YOLOv5 citation.
+This project includes and builds upon [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5). The repository is distributed under GNU AGPL v3; `dragon_fruit/` is the original application and integration layer. See [NOTICE](NOTICE) for attribution, dependency and warranty notices, and [LICENSE](LICENSE) for the license text.

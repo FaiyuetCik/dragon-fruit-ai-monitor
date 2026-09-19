@@ -1,0 +1,15 @@
+# Third-party and license notices
+
+## Ultralytics YOLOv5
+
+This repository includes and builds upon source code from [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5), licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). The upstream license text is in [LICENSE](LICENSE), and the upstream citation is in [CITATION.cff](CITATION.cff).
+
+The `dragon_fruit/` application code is an original modification and integration layer for this project. It is distributed under AGPL-3.0 together with the repository. This notice does not grant any trademark rights or rights to use Ultralytics branding.
+
+## Runtime dependencies
+
+The project installs third-party dependencies from PyPI and the PyTorch package index at setup time. Their copyright and license notices remain with the respective packages. The main runtime dependencies use permissive or copyleft licenses, including AGPL-3.0 for `ultralytics`, BSD-family licenses for PyTorch and related components, Apache-2.0 for OpenCV, MIT for PyYAML and thop, and HPND for Pillow. Users distributing a bundled environment or executable must preserve the notices required by those packages.
+
+## Warranty
+
+This software is provided without warranty under the terms of AGPL-3.0. See [LICENSE](LICENSE).

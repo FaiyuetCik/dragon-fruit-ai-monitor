@@ -451,7 +451,7 @@ def build_interface():
                      recommendations, alert_table, json_file, img_file],
         )
 
-        gr.HTML('<div class="app-footer">Dragon Fruit AI Vision Monitoring System &copy; 2026</div>')
+        gr.HTML('<div class="app-footer">Dragon Fruit AI Vision Monitoring System &copy; 2026 · Modified YOLOv5 components · AGPL-3.0 · No warranty · <a href="https://github.com/FaiyuetCik/dragon-fruit-ai-monitor" target="_blank">Source and license</a></div>')
 
     return demo
 
